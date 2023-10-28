@@ -1,5 +1,5 @@
 
-import { List } from "./ContactsList.styled"
+import { List, ListItem, ListBtn } from "./ContactsList.styled"
 import { NotificationMessage } from "components/NotificationMessage"
 import PropTypes from 'prop-types';
 
@@ -10,11 +10,15 @@ export const ContactsList = ({ contacts, handleDeleteContact }) =>
             ? <NotificationMessage message="No contacts yet" />
             : <List>
                 {contacts.map((contact) => (
-                    <li key={contact.id}>
+                    <ListItem key={contact.id}>
                         {contact.name}:&nbsp;
                         {contact.number}
-                        <button type="button" onClick={() => handleDeleteContact(contact.id)}>Delete</button>
-                    </li> 
+                        <ListBtn
+                            type="button"
+                            onClick={() => handleDeleteContact(contact.id)}>
+                            Delete
+                        </ListBtn>
+                    </ListItem> 
                 ))}
                 
             </List>}

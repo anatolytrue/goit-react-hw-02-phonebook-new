@@ -4,6 +4,8 @@ import {ContactForm } from "../ContactForm"
 import { ContactsList } from "../ContactsList/ContactsList";
 import { Filter } from "components/Filter"
 import { nanoid } from "nanoid";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import Notiflix from 'notiflix';
 
 
 
@@ -33,13 +35,12 @@ export default class App extends Component {
       number
     }
     
-    
     const isContactExist = contacts.some(contact => 
       contact.name.toLowerCase() === name.toLowerCase() || contact.number === number
     )
     
     if (isContactExist) {
-      alert('Contact already exist!')
+      Notiflix.Notify.warning('Contact already exist!');
       return
     } 
     

@@ -4,7 +4,6 @@ import {ContactForm } from "../ContactForm"
 import { ContactsList } from "../ContactsList/ContactsList";
 import { Filter } from "components/Filter"
 import { nanoid } from "nanoid";
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import Notiflix from 'notiflix';
 
 

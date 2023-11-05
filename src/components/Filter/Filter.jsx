@@ -11,7 +11,7 @@ export function Filter({ onChange, value }) {
         </FilterContainer>
         )
     }
-   
+    
 Filter.propTypes = {
         value: PropTypes.string.isRequired,
         onChange: PropTypes.func.isRequired

@@ -1,6 +1,5 @@
 import { FormStyled, FormItem, FormBtn, FormLabel, FormInput } from "./ContactForm.styled"
-import { nanoid } from 'nanoid'
-// import React from 'react'
+import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import { Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from "yup";
@@ -49,9 +48,7 @@ export const ContactForm = ({ handleAddContact }) => {
                     <FormBtn type="submit"disabled={!dirty||!isValid}>Submit</FormBtn>
                 </Form>
             )}
-
         </Formik>
-
     )
 }
 

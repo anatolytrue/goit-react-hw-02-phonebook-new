@@ -6,8 +6,6 @@ import { Filter } from "components/Filter"
 import { nanoid } from "nanoid";
 import Notiflix from 'notiflix';
 
-
-
 export default class App extends Component {
 
   state = {
@@ -55,7 +53,6 @@ export default class App extends Component {
     }))
   }
   
-  
   getVisibleContacts = () => {
     const { filter , contacts } = this.state
     const normalizedFilter = filter.toLowerCase();
@@ -70,10 +67,8 @@ render() {
   
   const { filter } = this.state
   const { handleAddContact, changeFilter, getVisibleContacts, handleDeleteContact } = this;
-
   const visibleContacts = getVisibleContacts()
   
-
     return (
       <MainContainer>
         <h1>Phonebook</h1>
